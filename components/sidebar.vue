@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ClipboardList, Home, Settings, Users } from 'lucide-vue-next'
+import { Icon } from '@iconify/vue'
 
 const props = defineProps<{
   isSideBarOpen?: boolean
@@ -22,16 +22,14 @@ const handleSidebar = () => {
         <li>
           <NuxtLink to="/"
             class="flex items-center p-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <Home :absolute-stroke-width="true"
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <Icon icon="mingcute:home-3-line" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
             <span class="ms-3">Главная</span>
           </NuxtLink>
         </li>
         <li>
           <NuxtLink to="/accounts"
             class="flex items-center p-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <ClipboardList :absolute-stroke-width="true"
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <Icon icon="ic:baseline-paypal" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
             <span class="flex-1 ms-3 whitespace-nowrap">Аккаунты</span>
 
             <!--            badge on nav menu-->
@@ -41,8 +39,7 @@ const handleSidebar = () => {
         <li>
           <NuxtLink to="/workers"
             class="flex items-center p-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <Users :absolute-stroke-width="true"
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <Icon icon="mdi:worker" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
             <span class="flex-1 ms-3 whitespace-nowrap">Воркеры</span>
             <span
               class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
@@ -51,8 +48,7 @@ const handleSidebar = () => {
         <li>
           <NuxtLink to="/settings"
             class="flex items-center p-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-            <Settings :absolute-stroke-width="true"
-              class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <Icon icon="ion:cog" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
             <span class="flex-1 ms-3 whitespace-nowrap">Настройки</span>
           </NuxtLink>
         </li>
